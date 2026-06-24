@@ -1,1 +1,758 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>NovaSonic Creator Transparency Dashboard</title><style>:root{--navy:#0f172a;--blue:#2563eb;--indigo:#4338ca;--cyan:#06b6d4;--bg:#f5f7fb;--card:#fff;--text:#1f2937;--muted:#6b7280;--border:#e5e7eb;--amber:#d97706;--red:#dc2626;--green:#16a34a}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}header{background:radial-gradient(circle at top right,rgba(6,182,212,.35),transparent 30%),linear-gradient(135deg,var(--navy),var(--indigo));color:#fff;padding:70px 22px 95px;text-align:center}header h1{margin:0;font-size:2.6rem}header p{max-width:900px;margin:16px auto 0;font-size:1.1rem;color:#dbeafe}.tagline{display:inline-block;margin-top:20px;padding:9px 15px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:999px;font-weight:700}nav{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--border);padding:12px 20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}nav a{text-decoration:none;color:var(--indigo);background:#eef2ff;padding:8px 12px;border-radius:999px;font-size:.9rem;font-weight:700}main{max-width:1180px;margin:0 auto;padding:30px 20px}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:-75px}.metric{background:#fff;border-radius:18px;padding:24px;box-shadow:0 14px 34px rgba(15,23,42,.13);text-align:center}.metric h2{margin:0;color:var(--indigo);font-size:2.1rem}.metric p{margin:8px 0 0;color:var(--muted);font-weight:700}section{background:#fff;margin-top:28px;border-radius:18px;padding:30px;box-shadow:0 8px 26px rgba(15,23,42,.06)}section h2{margin-top:0;color:var(--indigo)}.section-intro{color:var(--muted);max-width:900px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}.card{border:1px solid var(--border);border-radius:16px;padding:20px;background:#fff}.card h3{margin-top:0}.problem-card{border-left:6px solid var(--red);background:#fff7f7}.assumption{background:#fffbeb;border-left:6px solid var(--amber);padding:18px;border-radius:14px;margin-top:18px}.signal-buttons{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.signal-buttons button{border:0;background:#eef2ff;color:var(--indigo);padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:700}.signal-buttons button.active{background:var(--indigo);color:#fff}.signal-panel{border:1px solid var(--border);padding:24px;border-radius:18px;background:#f8fafc}.signal-panel h3{margin-top:0}.explanation{border:1px solid var(--border);border-radius:14px;margin-top:12px;overflow:hidden}.explanation button{width:100%;border:0;background:#f8fafc;padding:16px;text-align:left;font-weight:700;cursor:pointer;color:var(--text);font-size:1rem}.explanation-content{display:none;padding:0 16px 16px;color:var(--muted)}.explanation.open .explanation-content{display:block}.fairness-bars{margin-top:20px}.bar-row{margin:16px 0}.bar-label{display:flex;justify-content:space-between;margin-bottom:6px;font-weight:700}.bar{height:28px;border-radius:999px;background:#e5e7eb;overflow:hidden}.bar-fill{height:100%;display:flex;align-items:center;padding-left:12px;color:#fff;font-weight:700}.bar-top{width:81%;background:var(--red)}.bar-rest{width:19%;background:var(--blue)}.action-list{counter-reset:action}.action{display:flex;gap:16px;align-items:flex-start;padding:16px;border:1px solid var(--border);border-radius:14px;margin-top:12px;background:#f9fafb}.action:before{counter-increment:action;content:counter(action);min-width:34px;height:34px;border-radius:50%;background:var(--indigo);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}.commitment{border-left:5px solid var(--green)}.recommendation{background:linear-gradient(135deg,rgba(37,99,235,.08),rgba(6,182,212,.08));border:1px solid #bfdbfe}.print-row{text-align:center;margin-top:28px}.print-row button{border:0;background:var(--indigo);color:#fff;padding:13px 20px;border-radius:12px;cursor:pointer;font-size:1rem;font-weight:700}.print-row button:hover{background:#312e81}footer{text-align:center;padding:35px 20px;color:var(--muted)}@media(max-width:700px){header h1{font-size:2rem}section{padding:22px}.bar-label{flex-direction:column;gap:4px}}@media print{nav,.print-row{display:none}body{background:#fff}section,.metric{box-shadow:none}}</style></head><body><header><h1>NovaSonic Creator Transparency Dashboard</h1><p>A trust and transparency prototype designed to help creators understand visibility, recommendations, platform fairness and data-use transparency.</p><div class="tagline">Transparency is a retention strategy</div></header><nav><a href="#problem">Trust Problem</a><a href="#signals">Visibility Signals</a><a href="#recommendations">Recommendation Transparency</a><a href="#fairness">Platform Fairness</a><a href="#data">Data Use</a><a href="#actions">Creator Actions</a><a href="#commitments">Trust Commitments</a></nav><main><div class="metrics"><div class="metric"><h2>500,000</h2><p>Active users</p></div><div class="metric"><h2>12,000</h2><p>Creators</p></div><div class="metric"><h2>22%</h2><p>22% creator retention after six months</p></div><div class="metric"><h2>81%</h2><p>Top 3% generate 81% of listens</p></div></div><section id="problem"><h2>Creator Trust Problem</h2><p class="section-intro">NovaSonic's creator ecosystem shows signs of trust pressure. Only 22% of creators remain active after six months, while the top 3% generate 81% of listens. This dashboard is designed to reduce uncertainty by explaining how visibility may work and what creators can do next.</p><div class="grid"><div class="card problem-card"><h3>Creator trust</h3><p>Low retention suggests that many creators may not see a clear or trustworthy route to success on the platform.</p></div><div class="card problem-card"><h3>Recommendation transparency</h3><p>When creators cannot understand why content is promoted, ignored or receives limited reach, they may interpret the system as arbitrary.</p></div><div class="card problem-card"><h3>Platform fairness</h3><p>Extreme concentration of listens may create the perception that success is only available to a small creator elite.</p></div></div><div class="assumption"><strong>Assumption: the case does not confirm the exact recommendation model.</strong> This prototype therefore uses cautious language and plausible visibility signals for demonstration purposes.</div></section><section id="signals"><h2>Visibility Signal Breakdown</h2><p class="section-intro">This section explains the types of signals that may influence discoverability. The goal is to give creators practical transparency without making unsupported claims about NovaSonic's internal systems.</p><div class="signal-buttons"><button class="active" data-signal="engagement">Audience engagement</button><button data-signal="completion">Completion rate</button><button data-signal="publishing">Publishing consistency</button><button data-signal="retention">Listener retention</button><button data-signal="metadata">Metadata quality</button><button data-signal="feedback">Community feedback</button></div><div class="signal-panel"><h3 id="signalTitle">Audience engagement</h3><p id="signalExplanation">Episodes with stronger listener interaction may be easier for the platform to recommend.</p><p><strong>Creator action:</strong> <span id="signalAction">Encourage follows, saves and ratings.</span></p></div></section><section id="recommendations"><h2>Recommendation Transparency</h2><p class="section-intro">Creators need understandable explanations. These example cards show how NovaSonic could explain visibility without overclaiming certainty.</p><div class="explanation"><button type="button">Why might this episode be recommended?</button><div class="explanation-content">This episode may be recommended because recent listeners completed most of it and engagement signals suggest that the topic is relevant to similar audiences.</div></div><div class="explanation"><button type="button">Why might this episode receive less exposure?</button><div class="explanation-content">This episode may receive less exposure because early listener drop-off is high or because its topic signals are too broad to match a specific audience.</div></div><div class="explanation"><button type="button">Why might this episode reach a narrow audience?</button><div class="explanation-content">This episode may be recommended to a narrow audience because its content appears niche or strongly linked to a specific listener segment.</div></div><div class="explanation"><button type="button">Why might metadata matter?</button><div class="explanation-content">Metadata may help the platform understand what the episode is about. Clear titles, descriptions and categories can support better matching with relevant listeners.</div></div></section><section id="fairness"><h2>Platform Fairness and Concentration Risk</h2><p class="section-intro">When 3% of creators generate 81% of listens, creators outside that group may perceive the platform as difficult to break into. A transparency dashboard should therefore show not only performance, but also how visibility opportunities are distributed.</p><div class="fairness-bars"><div class="bar-row"><div class="bar-label"><span>Top 3% of creators</span><span>81% of listens</span></div><div class="bar"><div class="bar-fill bar-top">81%</div></div></div><div class="bar-row"><div class="bar-label"><span>Remaining 97% of creators</span><span>19% of listens</span></div><div class="bar"><div class="bar-fill bar-rest">19%</div></div></div></div><div class="assumption">NovaSonic should monitor whether recommendation or discovery systems reinforce existing popularity, because this could worsen creator churn and weaken platform fairness.</div></section><section id="data"><h2>Data-use Transparency</h2><p class="section-intro">If NovaSonic uses AI or algorithmic recommendation systems, creators should understand what kinds of data may influence visibility and how governance is applied.</p><div class="grid"><div class="card"><h3>What data may be used?</h3><ul><li>Listening behaviour</li><li>Episode metadata</li><li>Search and discovery activity</li><li>Engagement signals</li><li>Creator publishing patterns</li></ul></div><div class="card"><h3>What should NovaSonic explain?</h3><ul><li>Whether recommendations are AI-based, rules-based, editorial or hybrid</li><li>What data influences visibility</li><li>Whether creators can appeal or query visibility decisions</li><li>Whether fairness and concentration are audited</li><li>How creators can access their own performance data</li></ul></div></div></section><section id="actions"><h2>Creator Action Plan</h2><p class="section-intro">The dashboard should give creators practical actions rather than simply showing performance data.</p><div class="action-list"><div class="action"><div><strong>Improve episode metadata.</strong><p>Use clear titles, descriptions and categories so the platform can better understand the episode.</p></div></div><div class="action"><div><strong>Publish consistently for four weeks.</strong><p>Consistent publishing may create stronger audience and platform signals.</p></div></div><div class="action"><div><strong>Track completion rate.</strong><p>Episodes that retain listener attention may be easier to recommend to similar audiences.</p></div></div><div class="action"><div><strong>Review audience drop-off points.</strong><p>Drop-off patterns can help creators improve episode structure and pacing.</p></div></div><div class="action"><div><strong>Encourage follows and saves.</strong><p>These engagement signals may indicate audience value and support discoverability.</p></div></div><div class="action"><div><strong>Compare performance by topic and format.</strong><p>This helps creators identify which formats build stronger audience trust and retention.</p></div></div></div></section><section id="commitments"><h2>Trust Commitments</h2><p class="section-intro">To rebuild creator confidence, NovaSonic should treat transparency as a governance commitment, not simply an analytics feature.</p><div class="grid"><div class="card commitment"><h3>Explain recommendation factors</h3><p>Provide plain-language explanations of the signals that may affect visibility.</p></div><div class="card commitment"><h3>Communicate data use</h3><p>Tell creators what data is used and how it supports recommendation or discovery decisions.</p></div><div class="card commitment"><h3>Monitor fairness</h3><p>Review whether the top 3% listen concentration is worsening or improving over time.</p></div><div class="card commitment"><h3>Support creator queries</h3><p>Allow creators to query major visibility changes or unexplained performance drops.</p></div></div></section><section class="recommendation"><h2>Final Business Recommendation</h2><p>NovaSonic should pilot this Creator Transparency Dashboard with new and mid-tier creators, because these creators are most likely to experience uncertainty around visibility. Success should be measured through creator trust scores, dashboard engagement, creator retention after six months, and changes in the distribution of listens across creator tiers.</p><div class="print-row"><button type="button" id="printBtn">Print or Save as PDF</button></div></section></main><footer>NovaSonic Creator Transparency Dashboard Prototype | Task 2 Pipeline Deliverable</footer><script>document.addEventListener("DOMContentLoaded",function(){const e={engagement:{title:"Audience engagement",explanation:"Episodes with stronger listener interaction may be easier for the platform to recommend.",action:"Encourage follows, saves and ratings."},completion:{title:"Episode completion rate",explanation:"Episodes that listeners complete may indicate stronger relevance or quality.",action:"Review where listeners drop off and improve pacing."},publishing:{title:"Publishing consistency",explanation:"Regular publishing may help creators build a clearer audience pattern over time.",action:"Create a realistic publishing schedule and maintain it for four weeks."},retention:{title:"Listener retention",explanation:"Returning listeners may signal that a creator is building sustained audience value.",action:"Create episode series and encourage listeners to follow the show."},metadata:{title:"Metadata quality",explanation:"Clear titles, descriptions and categories may help the platform understand the content.",action:"Use specific titles, accurate categories and clear episode descriptions."},feedback:{title:"Community feedback",explanation:"Ratings, comments and shares may indicate that an episode is useful to listeners.",action:"Invite listeners to rate, comment and share after key episodes."}};document.querySelectorAll(".signal-buttons button").forEach(t=>{t.addEventListener("click",function(){const n=e[this.dataset.signal];document.getElementById("signalTitle").textContent=n.title;document.getElementById("signalExplanation").textContent=n.explanation;document.getElementById("signalAction").textContent=n.action;document.querySelectorAll(".signal-buttons button").forEach(e=>e.classList.remove("active"));this.classList.add("active")})});document.querySelectorAll(".explanation button").forEach(e=>{e.addEventListener("click",function(){this.parentElement.classList.toggle("open")})});document.getElementById("printBtn").addEventListener("click",function(){window.print()})});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaSonic Creator Transparency Dashboard</title>
+
+  <style>
+    :root {
+      --navy: #0f172a;
+      --indigo: #4338ca;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --green: #16a34a;
+      --amber: #d97706;
+      --red: #dc2626;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--navy), var(--indigo));
+      color: white;
+      padding: 70px 20px 90px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+    }
+
+    header p {
+      max-width: 850px;
+      margin: 16px auto 0;
+      color: #dbeafe;
+      font-size: 1.1rem;
+    }
+
+    .tagline {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-weight: bold;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--indigo);
+      background: #eef2ff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: -70px;
+    }
+
+    .metric {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.13);
+    }
+
+    .metric h2 {
+      margin: 0;
+      color: var(--indigo);
+      font-size: 2.1rem;
+    }
+
+    .metric p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-weight: bold;
+    }
+
+    section {
+      background: var(--card);
+      margin-top: 28px;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: var(--indigo);
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 900px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      background: white;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .problem-card {
+      border-left: 6px solid var(--red);
+      background: #fff7f7;
+    }
+
+    .assumption {
+      background: #fffbeb;
+      border-left: 6px solid var(--amber);
+      padding: 18px;
+      border-radius: 14px;
+      margin-top: 18px;
+    }
+
+    .signal-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .signal-buttons button {
+      border: none;
+      background: #eef2ff;
+      color: var(--indigo);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .signal-buttons button.active {
+      background: var(--indigo);
+      color: white;
+    }
+
+    .signal-panel {
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 18px;
+      background: #f8fafc;
+    }
+
+    .signal-panel h3 {
+      margin-top: 0;
+    }
+
+    .explanation {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-top: 12px;
+      overflow: hidden;
+    }
+
+    .explanation button {
+      width: 100%;
+      border: none;
+      background: #f8fafc;
+      padding: 16px;
+      text-align: left;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .explanation-content {
+      display: none;
+      padding: 0 16px 16px;
+      color: var(--muted);
+    }
+
+    .explanation.open .explanation-content {
+      display: block;
+    }
+
+    .fairness-bars {
+      margin-top: 20px;
+    }
+
+    .bar-row {
+      margin: 16px 0;
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .bar {
+      height: 28px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .bar-top {
+      width: 81%;
+      background: var(--red);
+    }
+
+    .bar-rest {
+      width: 19%;
+      background: var(--blue);
+    }
+
+    .action-list {
+      counter-reset: action;
+    }
+
+    .action {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-top: 12px;
+      background: #f9fafb;
+    }
+
+    .action::before {
+      counter-increment: action;
+      content: counter(action);
+      min-width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--indigo);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .commitment {
+      border-left: 5px solid var(--green);
+    }
+
+    .recommendation {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(6, 182, 212, 0.08));
+      border: 1px solid #bfdbfe;
+    }
+
+    .print-row {
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .print-row button {
+      border: none;
+      background: var(--indigo);
+      color: white;
+      padding: 13px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      .bar-label {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+
+    @media print {
+      nav,
+      .print-row {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      section,
+      .metric {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>NovaSonic Creator Transparency Dashboard</h1>
+    <p>
+      A trust and transparency prototype designed to help creators understand visibility,
+      recommendations, platform fairness and data-use transparency.
+    </p>
+    <div class="tagline">Transparency is a retention strategy</div>
+  </header>
+
+  <nav>
+    <a href="#problem">Trust Problem</a>
+    <a href="#signals">Visibility Signals</a>
+    <a href="#recommendations">Recommendation Transparency</a>
+    <a href="#fairness">Platform Fairness</a>
+    <a href="#data">Data Use</a>
+    <a href="#actions">Creator Actions</a>
+    <a href="#commitments">Trust Commitments</a>
+  </nav>
+
+  <main>
+    <div class="metrics">
+      <div class="metric">
+        <h2>500,000</h2>
+        <p>Active users</p>
+      </div>
+
+      <div class="metric">
+        <h2>12,000</h2>
+        <p>Creators</p>
+      </div>
+
+      <div class="metric">
+        <h2>22%</h2>
+        <p>Creator retention after six months</p>
+      </div>
+
+      <div class="metric">
+        <h2>81%</h2>
+        <p>Top 3% generate 81% of listens</p>
+      </div>
+    </div>
+
+    <section id="problem">
+      <h2>Creator Trust Problem</h2>
+      <p class="section-intro">
+        NovaSonic's creator ecosystem shows signs of trust pressure. Only 22% of creators remain
+        active after six months, while the top 3% generate 81% of listens. This dashboard is designed
+        to reduce uncertainty by explaining how visibility may work and what creators can do next.
+      </p>
+
+      <div class="grid">
+        <div class="card problem-card">
+          <h3>Creator trust</h3>
+          <p>
+            Low retention suggests that many creators may not see a clear or trustworthy route to
+            success on the platform.
+          </p>
+        </div>
+
+        <div class="card problem-card">
+          <h3>Recommendation transparency</h3>
+          <p>
+            When creators cannot understand why content is promoted, ignored or receives limited
+            reach, they may interpret the system as arbitrary.
+          </p>
+        </div>
+
+        <div class="card problem-card">
+          <h3>Platform fairness</h3>
+          <p>
+            Extreme concentration of listens may create the perception that success is only available
+            to a small creator elite.
+          </p>
+        </div>
+      </div>
+
+      <div class="assumption">
+        <strong>Assumption: the case does not confirm the exact recommendation model.</strong>
+        This prototype therefore uses cautious language and plausible visibility signals for
+        demonstration purposes.
+      </div>
+    </section>
+
+    <section id="signals">
+      <h2>Visibility Signal Breakdown</h2>
+      <p class="section-intro">
+        This section explains the types of signals that may influence discoverability. The goal is
+        to give creators practical transparency without making unsupported claims about NovaSonic's
+        internal systems.
+      </p>
+
+      <div class="signal-buttons">
+        <button class="active" data-signal="engagement">Audience engagement</button>
+        <button data-signal="completion">Completion rate</button>
+        <button data-signal="publishing">Publishing consistency</button>
+        <button data-signal="retention">Listener retention</button>
+        <button data-signal="metadata">Metadata quality</button>
+        <button data-signal="feedback">Community feedback</button>
+      </div>
+
+      <div class="signal-panel">
+        <h3 id="signalTitle">Audience engagement</h3>
+        <p id="signalExplanation">
+          Episodes with stronger listener interaction may be easier for the platform to recommend.
+        </p>
+        <p>
+          <strong>Creator action:</strong>
+          <span id="signalAction">Encourage follows, saves and ratings.</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <h2>Recommendation Transparency</h2>
+      <p class="section-intro">
+        Creators need understandable explanations. These example cards show how NovaSonic could
+        explain visibility without overclaiming certainty.
+      </p>
+
+      <div class="explanation">
+        <button type="button">Why might this episode be recommended?</button>
+        <div class="explanation-content">
+          This episode may be recommended because recent listeners completed most of it and engagement
+          signals suggest that the topic is relevant to similar audiences.
+        </div>
+      </div>
+
+      <div class="explanation">
+        <button type="button">Why might this episode receive less exposure?</button>
+        <div class="explanation-content">
+          This episode may receive less exposure because early listener drop-off is high or because
+          its topic signals are too broad to match a specific audience.
+        </div>
+      </div>
+
+      <div class="explanation">
+        <button type="button">Why might this episode reach a narrow audience?</button>
+        <div class="explanation-content">
+          This episode may be recommended to a narrow audience because its content appears niche or
+          strongly linked to a specific listener segment.
+        </div>
+      </div>
+
+      <div class="explanation">
+        <button type="button">Why might metadata matter?</button>
+        <div class="explanation-content">
+          Metadata may help the platform understand what the episode is about. Clear titles,
+          descriptions and categories can support better matching with relevant listeners.
+        </div>
+      </div>
+    </section>
+
+    <section id="fairness">
+      <h2>Platform Fairness and Concentration Risk</h2>
+      <p class="section-intro">
+        When 3% of creators generate 81% of listens, creators outside that group may perceive the
+        platform as difficult to break into. A transparency dashboard should therefore show not only
+        performance, but also how visibility opportunities are distributed.
+      </p>
+
+      <div class="fairness-bars">
+        <div class="bar-row">
+          <div class="bar-label">
+            <span>Top 3% of creators</span>
+            <span>81% of listens</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill bar-top">81%</div>
+          </div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">
+            <span>Remaining 97% of creators</span>
+            <span>19% of listens</span>
+          </div>
+          <div class="bar">
+            <div class="bar-fill bar-rest">19%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="assumption">
+        NovaSonic should monitor whether recommendation or discovery systems reinforce existing
+        popularity, because this could worsen creator churn and weaken platform fairness.
+      </div>
+    </section>
+
+    <section id="data">
+      <h2>Data-use Transparency</h2>
+      <p class="section-intro">
+        If NovaSonic uses AI or algorithmic recommendation systems, creators should understand what
+        kinds of data may influence visibility and how governance is applied.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>What data may be used?</h3>
+          <ul>
+            <li>Listening behaviour</li>
+            <li>Episode metadata</li>
+            <li>Search and discovery activity</li>
+            <li>Engagement signals</li>
+            <li>Creator publishing patterns</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>What should NovaSonic explain?</h3>
+          <ul>
+            <li>Whether recommendations are AI-based, rules-based, editorial or hybrid</li>
+            <li>What data influences visibility</li>
+            <li>Whether creators can appeal or query visibility decisions</li>
+            <li>Whether fairness and concentration are audited</li>
+            <li>How creators can access their own performance data</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="actions">
+      <h2>Creator Action Plan</h2>
+      <p class="section-intro">
+        The dashboard should give creators practical actions rather than simply showing performance data.
+      </p>
+
+      <div class="action-list">
+        <div class="action">
+          <div>
+            <strong>Improve episode metadata.</strong>
+            <p>Use clear titles, descriptions and categories so the platform can better understand the episode.</p>
+          </div>
+        </div>
+
+        <div class="action">
+          <div>
+            <strong>Publish consistently for four weeks.</strong>
+            <p>Consistent publishing may create stronger audience and platform signals.</p>
+          </div>
+        </div>
+
+        <div class="action">
+          <div>
+            <strong>Track completion rate.</strong>
+            <p>Episodes that retain listener attention may be easier to recommend to similar audiences.</p>
+          </div>
+        </div>
+
+        <div class="action">
+          <div>
+            <strong>Review audience drop-off points.</strong>
+            <p>Drop-off patterns can help creators improve episode structure and pacing.</p>
+          </div>
+        </div>
+
+        <div class="action">
+          <div>
+            <strong>Encourage follows and saves.</strong>
+            <p>These engagement signals may indicate audience value and support discoverability.</p>
+          </div>
+        </div>
+
+        <div class="action">
+          <div>
+            <strong>Compare performance by topic and format.</strong>
+            <p>This helps creators identify which formats build stronger audience trust and retention.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="commitments">
+      <h2>Trust Commitments</h2>
+      <p class="section-intro">
+        To rebuild creator confidence, NovaSonic should treat transparency as a governance commitment,
+        not simply an analytics feature.
+      </p>
+
+      <div class="grid">
+        <div class="card commitment">
+          <h3>Explain recommendation factors</h3>
+          <p>Provide plain-language explanations of the signals that may affect visibility.</p>
+        </div>
+
+        <div class="card commitment">
+          <h3>Communicate data use</h3>
+          <p>Tell creators what data is used and how it supports recommendation or discovery decisions.</p>
+        </div>
+
+        <div class="card commitment">
+          <h3>Monitor fairness</h3>
+          <p>Review whether the top 3% listen concentration is worsening or improving over time.</p>
+        </div>
+
+        <div class="card commitment">
+          <h3>Support creator queries</h3>
+          <p>Allow creators to query major visibility changes or unexplained performance drops.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommendation">
+      <h2>Final Business Recommendation</h2>
+      <p>
+        NovaSonic should pilot this Creator Transparency Dashboard with new and mid-tier creators,
+        because these creators are most likely to experience uncertainty around visibility.
+        Success should be measured through creator trust scores, dashboard engagement, creator
+        retention after six months, and changes in the distribution of listens across creator tiers.
+      </p>
+
+      <div class="print-row">
+        <button type="button" id="printButton">Print or Save as PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    NovaSonic Creator Transparency Dashboard Prototype | Task 2 Pipeline Deliverable
+  </footer>
+
+  <script>
+    const signals = {
+      engagement: {
+        title: "Audience engagement",
+        explanation: "Episodes with stronger listener interaction may be easier for the platform to recommend.",
+        action: "Encourage follows, saves and ratings."
+      },
+      completion: {
+        title: "Episode completion rate",
+        explanation: "Episodes that listeners complete may indicate stronger relevance or quality.",
+        action: "Review where listeners drop off and improve pacing."
+      },
+      publishing: {
+        title: "Publishing consistency",
+        explanation: "Regular publishing may help creators build a clearer audience pattern over time.",
+        action: "Create a realistic publishing schedule and maintain it for four weeks."
+      },
+      retention: {
+        title: "Listener retention",
+        explanation: "Returning listeners may signal that a creator is building sustained audience value.",
+        action: "Create episode series and encourage listeners to follow the show."
+      },
+      metadata: {
+        title: "Metadata quality",
+        explanation: "Clear titles, descriptions and categories may help the platform understand the content.",
+        action: "Use specific titles, accurate categories and clear episode descriptions."
+      },
+      feedback: {
+        title: "Community feedback",
+        explanation: "Ratings, comments and shares may indicate that an episode is useful to listeners.",
+        action: "Invite listeners to rate, comment and share after key episodes."
+      }
+    };
+
+    const signalButtons = document.querySelectorAll(".signal-buttons button");
+    const signalTitle = document.getElementById("signalTitle");
+    const signalExplanation = document.getElementById("signalExplanation");
+    const signalAction = document.getElementById("signalAction");
+
+    signalButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        const selectedSignal = signals[button.dataset.signal];
+
+        signalTitle.textContent = selectedSignal.title;
+        signalExplanation.textContent = selectedSignal.explanation;
+        signalAction.textContent = selectedSignal.action;
+
+        signalButtons.forEach(function(item) {
+          item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+      });
+    });
+
+    const explanationButtons = document.querySelectorAll(".explanation button");
+
+    explanationButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        button.parentElement.classList.toggle("open");
+      });
+    });
+
+    document.getElementById("printButton").addEventListener("click", function() {
+      window.print();
+    });
+  </script>
+</body>
+</html>
